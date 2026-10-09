@@ -84,7 +84,7 @@ Each phase ends with something playable. Don't start the next phase until the cu
 
 - [x] Player scene with 8-direction movement (`CharacterBody2D` with a single-frame `Sprite2D` wizard, animated in code with a hop, tilt and squash because Tiny Dungeon has one frame per character)
 - [x] `Camera2D` as a child of the player
-- [ ] Camera position smoothing
+- [x] Camera position smoothing
 - [x] Tiling ground via `Parallax2D` with `repeat_size` set to the size of the repeating region (2048×2048)
 - [ ] Debug overlay on a `CanvasLayer`: world position, enemy count, FPS
 
