@@ -2,10 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://ckuwoiwi85exh" path="res://Scenes/ground.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://c3myvthjwdoog" path="res://Scenes/player.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://bcyo6t4nysyk2" path="res://Scenes/debug_overlay.tscn" id="3_8gbba"]
 
 [node name="Main" type="Node2D" unique_id=2113814156]
 
 [node name="Ground" parent="." unique_id=1975771731 instance=ExtResource("1_bo1nx")]
+
+[node name="DebugOverlay" parent="." unique_id=1122229160 instance=ExtResource("3_8gbba")]
 
 [node name="Player" parent="." unique_id=191879284 instance=ExtResource("2_8gbba")]
 position = Vector2(0, 1)
