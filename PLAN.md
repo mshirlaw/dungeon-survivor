@@ -86,7 +86,7 @@ Each phase ends with something playable. Don't start the next phase until the cu
 - [x] `Camera2D` as a child of the player
 - [x] Camera position smoothing
 - [x] Tiling ground via `Parallax2D` with `repeat_size` set to the size of the repeating region (2048×2048)
-- [ ] Debug overlay on a `CanvasLayer`: world position, enemy count, FPS
+- [x] Debug overlay on a `CanvasLayer`: world position, enemy count, FPS
 
 **Done when:** You can walk in any direction for minutes with no visible edge or seam.
 
@@ -94,8 +94,8 @@ Each phase ends with something playable. Don't start the next phase until the cu
 
 *Goal:* The smallest version of the game that is actually a game.
 
-- [ ] Basic chaser enemy that steers toward the player
-- [ ] Spawn ring: enemies spawn on a circle just outside the screen (see [Appendix](#appendix-spawn-ring))
+- [x] Basic chaser enemy that steers toward the player
+- [x] Spawn ring: enemies spawn on a circle just outside the screen (see [Appendix](#appendix-spawn-ring))
 - [ ] Spawns biased toward the player's movement direction
 - [ ] Distant enemies recycled back onto the spawn ring instead of freed
 - [ ] First weapon: auto-fires a projectile at the nearest enemy
