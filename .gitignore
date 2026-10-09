@@ -1,0 +1,21 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# macOS
+.DS_Store
+
+# Export output
+/build/
+/export/
+*.dmg
+*.app
+*.exe
+*.pck
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Editors
+.vscode/
+.idea/
