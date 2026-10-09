@@ -13,6 +13,9 @@
 *.exe
 *.pck
 
+# Unused source assets
+/Originals/
+
 # Claude Code local settings
 .claude/settings.local.json
 

@@ -55,10 +55,10 @@ The game ships when every item below is true. Cut features before cutting any of
 
 ### Project settings for 16×16 pixel art
 
-- [ ] Rendering → Textures → Default Texture Filter: **Nearest**
-- [ ] Display → Window: base size 640×360 (or 480×270)
-- [ ] Stretch mode **canvas_items** or **viewport**, aspect **keep**
-- [ ] Window override size (e.g. 1280×720) so it opens at a usable size on desktop
+- [x] Rendering → Textures → Default Texture Filter: **Nearest**
+- [x] Display → Window: base size 384×216 (a 16:9 size that scales cleanly to common resolutions)
+- [x] Stretch mode **canvas_items**, aspect **keep**, scale mode **integer**
+- [x] Window override size 2304×1296 (6× the base size) so it opens at a usable size on high-DPI desktops
 
 ## Architecture
 
@@ -82,9 +82,10 @@ Each phase ends with something playable. Don't start the next phase until the cu
 
 *Goal:* The player can roam forever in a world that feels endless.
 
-- [ ] Player scene with 8-direction movement
-- [ ] `Camera2D` as a child of the player with light position smoothing
-- [ ] Tiling ground via `Parallax2D` with `repeat_size` set to the texture size
+- [x] Player scene with 8-direction movement (`CharacterBody2D` with a single-frame `Sprite2D` wizard, animated in code with a hop, tilt and squash because Tiny Dungeon has one frame per character)
+- [x] `Camera2D` as a child of the player
+- [ ] Camera position smoothing
+- [x] Tiling ground via `Parallax2D` with `repeat_size` set to the size of the repeating region (2048×2048)
 - [ ] Debug overlay on a `CanvasLayer`: world position, enemy count, FPS
 
 **Done when:** You can walk in any direction for minutes with no visible edge or seam.
@@ -166,10 +167,10 @@ Pick a random point on an invisible circle centered on the player, slightly larg
 
 ```gdscript
 func get_spawn_position() -> Vector2:
-	var viewport_size := get_viewport_rect().size
+	var viewport_size: Vector2 = get_viewport_rect().size
 	# Half the screen diagonal reaches the corners; add a margin
-	var radius := viewport_size.length() / 2.0 + 64.0
-	var angle := randf() * TAU
+	var radius: float = viewport_size.length() / 2.0 + 64.0
+	var angle: float = randf() * TAU
 	return player.global_position + Vector2.RIGHT.rotated(angle) * radius
 ```
 

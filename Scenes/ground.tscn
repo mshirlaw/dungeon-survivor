@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ckuwoiwi85exh"]
+
+[ext_resource type="Texture2D" uid="uid://dlqkge34xj87a" path="res://Assets/Tiles/tile_0049.png" id="1_688p1"]
+
+[node name="Parallax2D" type="Parallax2D" unique_id=1975771731]
+z_index = -1
+texture_repeat = 2
+repeat_size = Vector2(2048, 2048)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=198262796]
+texture = ExtResource("1_688p1")
+region_enabled = true
+region_rect = Rect2(0, 0, 2048, 2048)
