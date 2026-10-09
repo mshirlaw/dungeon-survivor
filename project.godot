@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Dungeon Survivor"
+run/main_scene="uid://cchslug8nbure"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,8 +24,8 @@ gdscript/warnings/inferred_declaration=2
 
 window/size/viewport_width=384
 window/size/viewport_height=216
-window/size/window_width_override=1536
-window/size/window_height_override=864
+window/size/window_width_override=2304
+window/size/window_height_override=1296
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 

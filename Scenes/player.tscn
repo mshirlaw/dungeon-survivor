@@ -1,33 +1,17 @@
 [gd_scene format=3 uid="uid://c3myvthjwdoog"]
 
 [ext_resource type="Script" uid="uid://dv81wvk8b3epo" path="res://Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://dag0w3p4mlwt7" path="res://Assets/Tilemap/tilemap.png" id="1_v0iea"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
-atlas = ExtResource("1_v0iea")
-region = Rect2(0, 119, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_f60y1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cvnsp")
-}],
-"loop": 1,
-"name": &"idle",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://b7d61h7noc25q" path="res://Assets/Tiles/tile_0084.png" id="2_cvnsp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f60y1"]
-radius = 5.0
+radius = 7.0
 
 [node name="Player" type="CharacterBody2D" unique_id=191879284]
 script = ExtResource("1_cvnsp")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=138976249]
+[node name="PlayerModel" type="Sprite2D" parent="." unique_id=1748791168]
 position = Vector2(0, -8)
-sprite_frames = SubResource("SpriteFrames_f60y1")
-animation = &"idle"
+texture = ExtResource("2_cvnsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=196490974]
 position = Vector2(0, -5)
